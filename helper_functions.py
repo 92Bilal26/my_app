@@ -87,15 +87,10 @@ def upload_txt_file(file_path, destination_dir):
     except Exception as e:
         return f"Error uploading file: {str(e)}"
 
-# Function to list all files in a directory
+directory_path = "/content"
+
 def list_files_in_directory(directory_path):
-  directory_path = "/content"
-
-# Call the function with the directory path as an argument
-files = list_files_in_directory(directory_path)
-
-# Print the result
-print(files)
+    """Lists all files in the specified directory."""
     if not os.path.isdir(directory_path):
         return "Directory does not exist."
     
@@ -104,6 +99,12 @@ print(files)
         return files if files else "No files found in the directory."
     except Exception as e:
         return f"Error listing files: {str(e)}"
+
+# Call the function with the directory path as an argument
+files = list_files_in_directory(directory_path)
+
+# Print the result
+print(files)
     
 # Empty `upload_txt_file` placeholder function to fulfill request
 def upload_txt_file():
