@@ -89,7 +89,13 @@ def upload_txt_file(file_path, destination_dir):
 
 # Function to list all files in a directory
 def list_files_in_directory(directory_path):
-    """Lists all files in the specified directory."""
+  directory_path = "/content"
+
+# Call the function with the directory path as an argument
+files = list_files_in_directory(directory_path)
+
+# Print the result
+print(files)
     if not os.path.isdir(directory_path):
         return "Directory does not exist."
     
