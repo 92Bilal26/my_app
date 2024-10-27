@@ -87,6 +87,8 @@ def upload_txt_file(file_path, destination_dir):
     except Exception as e:
         return f"Error uploading file: {str(e)}"
 
+
+# Define the directory path
 directory_path = "/content"
 
 def list_files_in_directory(directory_path):
